@@ -3,5 +3,5 @@
  
  New features:
  - Better and more user friendly design 
- - Making use of SwiftUI property wrappers
+ - Implementing SwiftUI property wrappers
  - MVVM Architecture (Planned)
