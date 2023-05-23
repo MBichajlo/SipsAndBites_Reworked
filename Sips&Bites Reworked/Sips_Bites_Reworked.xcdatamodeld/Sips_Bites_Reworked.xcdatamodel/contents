@@ -1,2 +1,37 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21279" systemVersion="21G72" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier=""/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21279" systemVersion="21G72" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Cocktail" representedClassName=".Cocktail" parentEntity="Recipe" syncable="YES">
+        <attribute name="amount_of_ingredients" optional="YES" attributeType="Transformable" customClassName="[String]"/>
+        <relationship name="ingredients" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Ingredient" inverseName="cocktail" inverseEntity="Ingredient"/>
+    </entity>
+    <entity name="Course" representedClassName=".Course" parentEntity="Recipe" syncable="YES">
+        <attribute name="amount_of_ingredients" optional="YES" attributeType="Transformable" customClassName="[String]"/>
+        <relationship name="ingredients" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Ingredient" inverseName="course" inverseEntity="Ingredient"/>
+    </entity>
+    <entity name="Ingredient" representedClassName=".Ingredient" syncable="YES">
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="name" attributeType="String"/>
+        <relationship name="cocktail" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Cocktail" inverseName="ingredients" inverseEntity="Cocktail"/>
+        <relationship name="course" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Course" inverseName="ingredients" inverseEntity="Course"/>
+    </entity>
+    <entity name="Recipe" representedClassName=".Recipe" isAbstract="YES" syncable="YES">
+        <attribute name="cost" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="introduction" optional="YES" attributeType="String"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="preparation" optional="YES" attributeType="String"/>
+        <attribute name="profile" optional="YES" attributeType="String"/>
+        <attribute name="score" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="time" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="author" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="author" inverseEntity="User"/>
+        <relationship name="favourites" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="favourites" inverseEntity="User"/>
+    </entity>
+    <entity name="User" representedClassName=".User" syncable="YES">
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="password" optional="YES" attributeType="String"/>
+        <attribute name="surname" optional="YES" attributeType="String"/>
+        <relationship name="author" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Recipe" inverseName="author" inverseEntity="Recipe"/>
+        <relationship name="favourites" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Recipe" inverseName="favourites" inverseEntity="Recipe"/>
+    </entity>
+</model>

@@ -26,7 +26,7 @@ struct menuView: View {
             
             }
             Spacer(minLength: 100)
-            NavigationLink(destination: daniaView()){
+            NavigationLink(destination: coursesView()){
                 RoundedRectangle(cornerRadius: 10)
                     .stroke(Color.black,lineWidth: 2)
                     .frame(width: 280,height: bH)

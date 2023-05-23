@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreData
 func void(){
     
 }
@@ -27,7 +28,12 @@ func genC()->Color{
 let bs=40.0
 
 let n=40
-struct daniaView: View {
+struct coursesView: View {
+    @ObservedObject var viewModel=coursesViewModel()
+    
+    
+    
+    
     var body: some View {
         GeometryReader {g in
             ZStack {
@@ -37,7 +43,7 @@ struct daniaView: View {
                     Spacer()
                     HStack{
                         Spacer()
-                        Button(action: void, label: {
+                        Button(action: viewModel.addCourse, label: {
                             Image(systemName: "plus.circle")
                                 .resizable()
                                 .scaledToFit()
@@ -60,17 +66,25 @@ struct daniaView: View {
                         Spacer()
                     }
                     Spacer()
-                    List{
-                        ForEach(0..<40){_ in
-                            VStack(alignment: .leading){
-                                Text("aaa")
+                    List(viewModel.courses,id: \.id){course in
+                            Button {
+                                print(course)
+                                print("aa")
+                                print(type(of: course))
+                                
+                                Task {@MainActor in
+                                    viewModel.deleteCourse(course)
+                                    viewModel.fetchCourses()
+                                }
+                                
+                            } label: {
+                                Text(course.name)
                             }
-                            .frame(maxWidth: .infinity)
-                            .background(genC())
-                            
-                            
-                            
-                        }
+                            .onChange(of: course){_ in
+                                viewModel.fetchCourses()
+                            }
+
+                                                    
                     }
                     .frame(maxWidth: .infinity,maxHeight: g.size.height*0.7)
                     .edgesIgnoringSafeArea(.all)
@@ -80,11 +94,14 @@ struct daniaView: View {
                 }
             }
         }
+        .onAppear(perform: viewModel.fetchCourses)
     }
+        
 }
-
+    
 struct daniaView_Previews: PreviewProvider {
     static var previews: some View {
-        daniaView()
+        coursesView()
+            
     }
 }

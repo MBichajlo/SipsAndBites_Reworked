@@ -14,7 +14,7 @@ struct Sips_Bites_ReworkedApp: App {
     var body: some Scene {
         WindowGroup {
             startingView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                //.environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }
