@@ -43,13 +43,12 @@ struct coursesView: View {
                     Spacer()
                     HStack{
                         Spacer()
-                        Button(action: viewModel.addCourse, label: {
+                        NavigationLink(destination: newCourseView()){
                             Image(systemName: "plus.circle")
                                 .resizable()
-                                .scaledToFit()
                                 .frame(width: bs,height: bs)
                                 .foregroundColor(.black)
-                        })
+                        }
                         .padding(.trailing,30)
                         Image(systemName: "fork.knife")
                             .resizable()

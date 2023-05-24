@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct Sips_Bites_ReworkedApp: App {
     let persistenceController = PersistenceController.shared
-
+    
     var body: some Scene {
         WindowGroup {
             startingView()

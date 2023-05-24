@@ -15,7 +15,7 @@ struct startingView: View {
                 Text("Sips&Bites")
                     .font(.system(size: 40))
                     .bold(true)
-                    .shadow(color:.black.opacity(0.05) ,radius: 1,x: 0,y:4)
+                    .shadow(color:.black.opacity(0.2) ,radius: 1,x: 2,y:4)
                 Spacer()
                 NavigationLink(destination:menuView()){
                     Image(systemName: "arrow.left")

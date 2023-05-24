@@ -15,9 +15,8 @@ import CoreData
     private let context=PersistenceController.shared.container.viewContext
     @Published var courses:[Course]=[]
     
-    init() {
-        fetchCourses()
-    }
+    
+   
     
     func fetchCourses(){
         let request=NSFetchRequest<Course>(entityName: "Course")

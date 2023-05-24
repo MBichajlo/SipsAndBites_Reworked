@@ -29,6 +29,7 @@
 		9873EDCD2A1CD58A00C7E691 /* Cocktail+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9873EDC32A1CD58A00C7E691 /* Cocktail+CoreDataClass.swift */; };
 		9873EDCE2A1CD58A00C7E691 /* Cocktail+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9873EDC42A1CD58A00C7E691 /* Cocktail+CoreDataProperties.swift */; };
 		9873EDD12A1D15A300C7E691 /* newCourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9873EDD02A1D15A300C7E691 /* newCourseViewModel.swift */; };
+		9873EDD32A1E487700C7E691 /* newCourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9873EDD22A1E487700C7E691 /* newCourseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		9873EDC32A1CD58A00C7E691 /* Cocktail+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Cocktail+CoreDataClass.swift"; path = "Sips&Bites Reworked/CoreDataClasses/Cocktail+CoreDataClass.swift"; sourceTree = "<group>"; };
 		9873EDC42A1CD58A00C7E691 /* Cocktail+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Cocktail+CoreDataProperties.swift"; path = "Sips&Bites Reworked/CoreDataClasses/Cocktail+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9873EDD02A1D15A300C7E691 /* newCourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newCourseViewModel.swift; sourceTree = "<group>"; };
+		9873EDD22A1E487700C7E691 /* newCourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newCourseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				9813E4A329FA622900617710 /* Sips_Bites_ReworkedApp.swift */,
 				9817794629FC796B005AACFA /* userView.swift */,
 				9817794429FC795D005AACFA /* cocktaileView.swift */,
+				9873EDD22A1E487700C7E691 /* newCourseView.swift */,
 				9817794029FC0A17005AACFA /* menuView.swift */,
 				9817794229FC75FC005AACFA /* coursesView.swift */,
 				9817793E29FC08FF005AACFA /* startingView.swift */,
@@ -215,6 +218,7 @@
 				9817794729FC796B005AACFA /* userView.swift in Sources */,
 				9873EDC52A1CD58A00C7E691 /* Recipe+CoreDataClass.swift in Sources */,
 				9873EDC92A1CD58A00C7E691 /* User+CoreDataClass.swift in Sources */,
+				9873EDD32A1E487700C7E691 /* newCourseView.swift in Sources */,
 				9813E4AD29FA622B00617710 /* Persistence.swift in Sources */,
 				9873EDCA2A1CD58A00C7E691 /* User+CoreDataProperties.swift in Sources */,
 				9873EDCE2A1CD58A00C7E691 /* Cocktail+CoreDataProperties.swift in Sources */,
