@@ -30,6 +30,7 @@
 		9873EDCE2A1CD58A00C7E691 /* Cocktail+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9873EDC42A1CD58A00C7E691 /* Cocktail+CoreDataProperties.swift */; };
 		9873EDD12A1D15A300C7E691 /* newCourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9873EDD02A1D15A300C7E691 /* newCourseViewModel.swift */; };
 		9873EDD32A1E487700C7E691 /* newCourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9873EDD22A1E487700C7E691 /* newCourseView.swift */; };
+		989D7FFD2A1FB60A000F7847 /* ingredientsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D7FFC2A1FB60A000F7847 /* ingredientsList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		9873EDC42A1CD58A00C7E691 /* Cocktail+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Cocktail+CoreDataProperties.swift"; path = "Sips&Bites Reworked/CoreDataClasses/Cocktail+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9873EDD02A1D15A300C7E691 /* newCourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newCourseViewModel.swift; sourceTree = "<group>"; };
 		9873EDD22A1E487700C7E691 /* newCourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newCourseView.swift; sourceTree = "<group>"; };
+		989D7FFC2A1FB60A000F7847 /* ingredientsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ingredientsList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 		9813E4A229FA622900617710 /* Sips&Bites Reworked */ = {
 			isa = PBXGroup;
 			children = (
+				989D7FFC2A1FB60A000F7847 /* ingredientsList.swift */,
 				9813E4A329FA622900617710 /* Sips_Bites_ReworkedApp.swift */,
 				9817794629FC796B005AACFA /* userView.swift */,
 				9817794429FC795D005AACFA /* cocktaileView.swift */,
@@ -223,6 +226,7 @@
 				9873EDCA2A1CD58A00C7E691 /* User+CoreDataProperties.swift in Sources */,
 				9873EDCE2A1CD58A00C7E691 /* Cocktail+CoreDataProperties.swift in Sources */,
 				9873EDC82A1CD58A00C7E691 /* Ingredient+CoreDataProperties.swift in Sources */,
+				989D7FFD2A1FB60A000F7847 /* ingredientsList.swift in Sources */,
 				9873EDCB2A1CD58A00C7E691 /* Course+CoreDataClass.swift in Sources */,
 				9873EDCD2A1CD58A00C7E691 /* Cocktail+CoreDataClass.swift in Sources */,
 				9813E4B029FA622B00617710 /* Sips_Bites_Reworked.xcdatamodeld in Sources */,

@@ -13,8 +13,9 @@ struct newCourseView: View {
     
     @ObservedObject var viewModel=newCourseModel()
     
+    @State var ingrDropDown=false
+    
     var body: some View {
-        GeometryReader {g in
             ScrollView(){
                 VStack(alignment: .center){
                     TextField("Nowy przepis", text: $viewModel.newname)
@@ -22,19 +23,29 @@ struct newCourseView: View {
                         .textInputAutocapitalization(.never)
                         .font(.largeTitle)
                         //.background{Color(.cyan)}
+                    Rectangle()
+                        .foregroundColor(.clear)
+                        .frame(width: 150, height: 150)
+                        .border(.cyan)
+                        .padding(.top,30)
                     Spacer()
+                    
+                    ingredientsList(dropDown: $ingrDropDown)
+                        
+                    Spacer(minLength: 50)
                     Button(action: {
                         viewModel.saveCourse()
                         dismiss()
                     }){
                         Text("Save")
                             
-                    }.padding(.top,600)
+                    }
+                    
                         
                         
-                }
+                }.animation(.spring(),value:  ingrDropDown)
             }
-        }
+        
     }
 }
 
