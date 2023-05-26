@@ -22,7 +22,9 @@ class newCourseModel:ObservableObject{
     }
     
     
-    
+    func test(){
+        print("a")
+    }
    
     
      

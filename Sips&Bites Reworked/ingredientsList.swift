@@ -9,16 +9,14 @@ import SwiftUI
 
 struct ingredientsList: View {
     @Binding var dropDown:Bool
-    
+    @ObservedObject var viewModel:newCourseModel
     
     var body: some View {
         
         
         VStack(spacing:0) {
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 5.0)
-                            .stroke(.gray,lineWidth: 1.0)
-                        HStack{
+                    VStack {
+                        HStack(){
                             
                             Text("Składniki:")
                                 .padding(.leading,20)
@@ -27,25 +25,36 @@ struct ingredientsList: View {
                                 dropDown.toggle()
                             },label: {
                                 Image(systemName:"chevron.down")
-                                    .rotationEffect(.degrees(dropDown ? 180:0))
+                                    .rotationEffect(.degrees(dropDown ? -180:0))
                                     .foregroundColor(.black)
                             })
                             .padding(.trailing,20)
                             
                             
-                        }.padding(.bottom,0)
-                    }.frame(width: 360,height: 35)
-                if dropDown{
-                    VStack{
-                        Rectangle()
-                            .stroke(.gray,lineWidth: 1.0)
-                            .frame(width: 360,height: 150)
-                    }
-                    .offset(y:dropDown ? 0:-150)
-                    
-                    
-                    
+                        }.padding(.top,10)
+                        if dropDown{
+                            VStack(spacing:0){
+                                Divider()
+                                    .overlay(.gray)
+                                List(){
+                                    ForEach(1..<100){i in
+                                        Button("\(1)", action: viewModel.test)
+                                        
+                                    }
+                                }.listStyle(.plain)
+                                Spacer()
+                            }
+                            
+                            
+                        }
+                        
+                        Spacer()
+                    }.frame(width: 360,height: dropDown ? 200:35)
+                .background{
+                    RoundedRectangle(cornerRadius: 5.0)
+                        .stroke(.gray,lineWidth: 1.0)
                 }
+                
                     
                     
                     
@@ -54,6 +63,17 @@ struct ingredientsList: View {
     }
         
     }
+/*if dropDown{
+    VStack{
+        Rectangle()
+            .stroke(.gray,lineWidth: 1.0)
+            .frame(width: 360,height: 150)
+    }
+    .offset(y:dropDown ? 0:-150)
+    
+    
+    
+}*/
 
 
 /*struct ingrDropDown:View{
@@ -85,7 +105,10 @@ struct ingredientsList: View {
 struct ingredientsList_Previews: PreviewProvider {
     
     static var previews: some View {
-        EmptyView()
+        Group {
+            ingredientsList(dropDown: .constant(true),viewModel: newCourseModel())
+            ingredientsList(dropDown: .constant(false),viewModel: newCourseModel())
+        }
         
     }
 }

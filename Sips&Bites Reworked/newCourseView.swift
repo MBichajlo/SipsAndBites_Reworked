@@ -30,7 +30,7 @@ struct newCourseView: View {
                         .padding(.top,30)
                     Spacer()
                     
-                    ingredientsList(dropDown: $ingrDropDown)
+                    ingredientsList(dropDown: $ingrDropDown,viewModel: viewModel)
                         
                     Spacer(minLength: 50)
                     Button(action: {
