@@ -52,5 +52,7 @@ struct newCourseView: View {
 struct newCourseView_Previews: PreviewProvider {
     static var previews: some View {
         newCourseView()
+            .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
+            
     }
 }
