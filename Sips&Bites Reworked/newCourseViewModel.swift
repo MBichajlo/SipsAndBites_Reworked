@@ -14,7 +14,9 @@ import CoreData
     
     @Published var allIngrList:[Ingredient]=[]
     @Published var newIngredientAlert=false
+    @Published var addingIngredientAlert=false
     @Published var wrongNameAlert=false
+    @Published var amount=""
     
     @Published var ingrList:[Ingredient]=[]
     @Published var newname:String=""
@@ -38,9 +40,9 @@ import CoreData
         
     }
     
-    func addToIngredients(){
+    func addToIngredients(_ ingredient:Ingredient){
         
-        //ingrList.append(newIngredient())
+       
     }
     
     func ingrRemove(_ i:Ingredient){

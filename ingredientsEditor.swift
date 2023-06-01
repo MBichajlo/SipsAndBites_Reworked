@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import CoreData
 struct ingredientsEditor: View {
     
     
@@ -15,7 +15,7 @@ struct ingredientsEditor: View {
     @Binding var viewVis:Bool
     @State var dragOffset=CGSize.zero
     @ObservedObject var viewModel:newCourseModel
-    @FetchRequest(sortDescriptors: []) var list:FetchedResults<Ingredient>
+    @FetchRequest(sortDescriptors: [],animation: .none) var list:FetchedResults<Ingredient>
     @State var isSearching = false
     //@State var shake = false
     @State var ingredientFilter:String=""
@@ -50,16 +50,13 @@ struct ingredientsEditor: View {
                             TextField("Wyszukaj składnik", text: $ingredientFilter)
                                 
                                 .textInputAutocapitalization(.never)
-                                //.onTapGesture {
-                                    //isSearching.toggle()
-                                    
-                                    
-                                //}
+                                
                                 .onChange(of: ingredientFilter, perform: {_ in
                                     if ingredientFilter.isEmpty{
-                                        list.nsPredicate=nil
+                                        list.nsPredicate=NSPredicate(format: "not (SELF IN %@)", viewModel.ingrList)
                                     }else{
-                                        list.nsPredicate=NSPredicate(format: "%K BEGINSWITH[cd] %@",#keyPath(Ingredient.name), ingredientFilter.lowercased())
+                                        
+                                        list.nsPredicate=NSCompoundPredicate(type: .and, subpredicates: [NSPredicate(format: "%K BEGINSWITH[cd] %@",#keyPath(Ingredient.name), ingredientFilter.lowercased()),NSPredicate(format: "not (SELF IN %@)", viewModel.ingrList)])
                                         isSearching=true
                                     }
                                 })
@@ -77,18 +74,24 @@ struct ingredientsEditor: View {
                             
                         ForEach(list,id: \.id){i in
                             Button {
-                                viewModel.ingrDelete(i)
+                                viewModel.addToIngredients(i)
+                                
+                                
                             } label: {
                                 Text(i.name)
                             }.buttonStyle(.plain)
                                 .frame(maxWidth: .infinity)
                                 .background{
-                                    RoundedRectangle(cornerRadius: 9.0)
-                                        .stroke(.gray,lineWidth: 1)
+                                    
                                 }
                                 .padding(4)
 
-                        }
+                        }.onChange(of: viewModel.ingrList, perform: {_ in
+                            list.nsPredicate=NSPredicate(format: "not (SELF IN %@)", viewModel.ingrList)
+                                
+                        })
+                        
+                        
                         if (list.count<4){
                             Button {
                                 viewModel.newIngredientAlert.toggle()
@@ -118,6 +121,9 @@ struct ingredientsEditor: View {
             
             .offset(x:viewVis ? screensize-barWidth  :screensize )
             .animation(.default, value: viewVis)
+            .onChange(of: viewVis, perform: {_ in
+                list.nsPredicate=NSPredicate(format: "not (SELF IN %@)", viewModel.ingrList)
+            })
             Spacer()
         }
         
@@ -146,8 +152,25 @@ struct ingredientsEditor: View {
         .alert("Ten składnik już istnieje", isPresented: $viewModel.wrongNameAlert,actions: {
             
         })
+        .alert("Podaj ilość:", isPresented: $viewModel.addingIngredientAlert) {
+            TextField("....", text: $viewModel.amount)
+                .textInputAutocapitalization(.never)
+            Button {
+                
+            } label: {
+                Text("Akceptuj")
+            }
+            Button(role: .cancel) {
+                
+            } label: {
+                Text("Anuluj")
+            }
+
+
+        }
         
     }
+    
 }
 
 struct ingredientsEditor_Preview: PreviewProvider {

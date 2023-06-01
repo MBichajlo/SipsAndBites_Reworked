@@ -2,7 +2,7 @@
 //  Recipe+CoreDataProperties.swift
 //  Sips&Bites Reworked
 //
-//  Created by Maciej Bichajło on 23/05/2023.
+//  Created by Maciej Bichajło on 01/06/2023.
 //
 //
 
@@ -17,7 +17,7 @@ extension Recipe {
     }
 
     @NSManaged public var cost: Int64
-    @NSManaged public var id: UUID
+    @NSManaged public var id: UUID?
     @NSManaged public var introduction: String?
     @NSManaged public var name: String
     @NSManaged public var preparation: String?

@@ -18,19 +18,21 @@
 		9817794529FC795D005AACFA /* cocktaileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9817794429FC795D005AACFA /* cocktaileView.swift */; };
 		9817794729FC796B005AACFA /* userView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9817794629FC796B005AACFA /* userView.swift */; };
 		982383E42A1CD01F00AE2CFD /* coursesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982383E32A1CD01F00AE2CFD /* coursesViewModel.swift */; };
-		9873EDC52A1CD58A00C7E691 /* Recipe+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9873EDBB2A1CD58A00C7E691 /* Recipe+CoreDataClass.swift */; };
-		9873EDC62A1CD58A00C7E691 /* Recipe+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9873EDBC2A1CD58A00C7E691 /* Recipe+CoreDataProperties.swift */; };
-		9873EDC72A1CD58A00C7E691 /* Ingredient+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9873EDBD2A1CD58A00C7E691 /* Ingredient+CoreDataClass.swift */; };
-		9873EDC82A1CD58A00C7E691 /* Ingredient+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9873EDBE2A1CD58A00C7E691 /* Ingredient+CoreDataProperties.swift */; };
-		9873EDC92A1CD58A00C7E691 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9873EDBF2A1CD58A00C7E691 /* User+CoreDataClass.swift */; };
-		9873EDCA2A1CD58A00C7E691 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9873EDC02A1CD58A00C7E691 /* User+CoreDataProperties.swift */; };
-		9873EDCB2A1CD58A00C7E691 /* Course+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9873EDC12A1CD58A00C7E691 /* Course+CoreDataClass.swift */; };
-		9873EDCC2A1CD58A00C7E691 /* Course+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9873EDC22A1CD58A00C7E691 /* Course+CoreDataProperties.swift */; };
-		9873EDCD2A1CD58A00C7E691 /* Cocktail+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9873EDC32A1CD58A00C7E691 /* Cocktail+CoreDataClass.swift */; };
-		9873EDCE2A1CD58A00C7E691 /* Cocktail+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9873EDC42A1CD58A00C7E691 /* Cocktail+CoreDataProperties.swift */; };
 		9873EDD12A1D15A300C7E691 /* newCourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9873EDD02A1D15A300C7E691 /* newCourseViewModel.swift */; };
 		9873EDD32A1E487700C7E691 /* newCourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9873EDD22A1E487700C7E691 /* newCourseView.swift */; };
 		9889AE9D2A263F2D00ECBE86 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9889AE9C2A263F2D00ECBE86 /* extensions.swift */; };
+		9889AECC2A2921A600ECBE86 /* Cocktail+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9889AEC02A2921A600ECBE86 /* Cocktail+CoreDataClass.swift */; };
+		9889AECD2A2921A600ECBE86 /* Cocktail+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9889AEC12A2921A600ECBE86 /* Cocktail+CoreDataProperties.swift */; };
+		9889AECE2A2921A600ECBE86 /* Recipe+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9889AEC22A2921A600ECBE86 /* Recipe+CoreDataClass.swift */; };
+		9889AECF2A2921A600ECBE86 /* Recipe+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9889AEC32A2921A600ECBE86 /* Recipe+CoreDataProperties.swift */; };
+		9889AED02A2921A600ECBE86 /* Ingredient+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9889AEC42A2921A600ECBE86 /* Ingredient+CoreDataClass.swift */; };
+		9889AED12A2921A600ECBE86 /* Ingredient+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9889AEC52A2921A600ECBE86 /* Ingredient+CoreDataProperties.swift */; };
+		9889AED22A2921A600ECBE86 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9889AEC62A2921A600ECBE86 /* User+CoreDataClass.swift */; };
+		9889AED32A2921A600ECBE86 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9889AEC72A2921A600ECBE86 /* User+CoreDataProperties.swift */; };
+		9889AED42A2921A600ECBE86 /* IngredientInfo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9889AEC82A2921A600ECBE86 /* IngredientInfo+CoreDataClass.swift */; };
+		9889AED52A2921A600ECBE86 /* IngredientInfo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9889AEC92A2921A600ECBE86 /* IngredientInfo+CoreDataProperties.swift */; };
+		9889AED62A2921A600ECBE86 /* Course+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9889AECA2A2921A600ECBE86 /* Course+CoreDataClass.swift */; };
+		9889AED72A2921A600ECBE86 /* Course+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9889AECB2A2921A600ECBE86 /* Course+CoreDataProperties.swift */; };
 		989D7FFD2A1FB60A000F7847 /* ingredientsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D7FFC2A1FB60A000F7847 /* ingredientsList.swift */; };
 		98F8CAA22A23D64900EB5BD7 /* ingredientsEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F8CAA12A23D64900EB5BD7 /* ingredientsEditor.swift */; };
 /* End PBXBuildFile section */
@@ -48,19 +50,21 @@
 		9817794429FC795D005AACFA /* cocktaileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cocktaileView.swift; sourceTree = "<group>"; };
 		9817794629FC796B005AACFA /* userView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userView.swift; sourceTree = "<group>"; };
 		982383E32A1CD01F00AE2CFD /* coursesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coursesViewModel.swift; sourceTree = "<group>"; };
-		9873EDBB2A1CD58A00C7E691 /* Recipe+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Recipe+CoreDataClass.swift"; path = "Sips&Bites Reworked/CoreDataClasses/Recipe+CoreDataClass.swift"; sourceTree = "<group>"; };
-		9873EDBC2A1CD58A00C7E691 /* Recipe+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Recipe+CoreDataProperties.swift"; path = "Sips&Bites Reworked/CoreDataClasses/Recipe+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		9873EDBD2A1CD58A00C7E691 /* Ingredient+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Ingredient+CoreDataClass.swift"; path = "Sips&Bites Reworked/CoreDataClasses/Ingredient+CoreDataClass.swift"; sourceTree = "<group>"; };
-		9873EDBE2A1CD58A00C7E691 /* Ingredient+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Ingredient+CoreDataProperties.swift"; path = "Sips&Bites Reworked/CoreDataClasses/Ingredient+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		9873EDBF2A1CD58A00C7E691 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "User+CoreDataClass.swift"; path = "Sips&Bites Reworked/CoreDataClasses/User+CoreDataClass.swift"; sourceTree = "<group>"; };
-		9873EDC02A1CD58A00C7E691 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "User+CoreDataProperties.swift"; path = "Sips&Bites Reworked/CoreDataClasses/User+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		9873EDC12A1CD58A00C7E691 /* Course+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Course+CoreDataClass.swift"; path = "Sips&Bites Reworked/CoreDataClasses/Course+CoreDataClass.swift"; sourceTree = "<group>"; };
-		9873EDC22A1CD58A00C7E691 /* Course+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Course+CoreDataProperties.swift"; path = "Sips&Bites Reworked/CoreDataClasses/Course+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		9873EDC32A1CD58A00C7E691 /* Cocktail+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Cocktail+CoreDataClass.swift"; path = "Sips&Bites Reworked/CoreDataClasses/Cocktail+CoreDataClass.swift"; sourceTree = "<group>"; };
-		9873EDC42A1CD58A00C7E691 /* Cocktail+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Cocktail+CoreDataProperties.swift"; path = "Sips&Bites Reworked/CoreDataClasses/Cocktail+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9873EDD02A1D15A300C7E691 /* newCourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newCourseViewModel.swift; sourceTree = "<group>"; };
 		9873EDD22A1E487700C7E691 /* newCourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newCourseView.swift; sourceTree = "<group>"; };
 		9889AE9C2A263F2D00ECBE86 /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
+		9889AEC02A2921A600ECBE86 /* Cocktail+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cocktail+CoreDataClass.swift"; sourceTree = "<group>"; };
+		9889AEC12A2921A600ECBE86 /* Cocktail+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cocktail+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9889AEC22A2921A600ECBE86 /* Recipe+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipe+CoreDataClass.swift"; sourceTree = "<group>"; };
+		9889AEC32A2921A600ECBE86 /* Recipe+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipe+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9889AEC42A2921A600ECBE86 /* Ingredient+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ingredient+CoreDataClass.swift"; sourceTree = "<group>"; };
+		9889AEC52A2921A600ECBE86 /* Ingredient+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ingredient+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9889AEC62A2921A600ECBE86 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		9889AEC72A2921A600ECBE86 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9889AEC82A2921A600ECBE86 /* IngredientInfo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IngredientInfo+CoreDataClass.swift"; sourceTree = "<group>"; };
+		9889AEC92A2921A600ECBE86 /* IngredientInfo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IngredientInfo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9889AECA2A2921A600ECBE86 /* Course+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Course+CoreDataClass.swift"; sourceTree = "<group>"; };
+		9889AECB2A2921A600ECBE86 /* Course+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Course+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		989D7FFC2A1FB60A000F7847 /* ingredientsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ingredientsList.swift; sourceTree = "<group>"; };
 		98F8CAA12A23D64900EB5BD7 /* ingredientsEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ingredientsEditor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,16 +130,18 @@
 		982383E22A1CCF3900AE2CFD /* CoreDataClasses */ = {
 			isa = PBXGroup;
 			children = (
-				9873EDBB2A1CD58A00C7E691 /* Recipe+CoreDataClass.swift */,
-				9873EDBC2A1CD58A00C7E691 /* Recipe+CoreDataProperties.swift */,
-				9873EDBD2A1CD58A00C7E691 /* Ingredient+CoreDataClass.swift */,
-				9873EDBE2A1CD58A00C7E691 /* Ingredient+CoreDataProperties.swift */,
-				9873EDBF2A1CD58A00C7E691 /* User+CoreDataClass.swift */,
-				9873EDC02A1CD58A00C7E691 /* User+CoreDataProperties.swift */,
-				9873EDC12A1CD58A00C7E691 /* Course+CoreDataClass.swift */,
-				9873EDC22A1CD58A00C7E691 /* Course+CoreDataProperties.swift */,
-				9873EDC32A1CD58A00C7E691 /* Cocktail+CoreDataClass.swift */,
-				9873EDC42A1CD58A00C7E691 /* Cocktail+CoreDataProperties.swift */,
+				9889AEC02A2921A600ECBE86 /* Cocktail+CoreDataClass.swift */,
+				9889AEC12A2921A600ECBE86 /* Cocktail+CoreDataProperties.swift */,
+				9889AEC22A2921A600ECBE86 /* Recipe+CoreDataClass.swift */,
+				9889AEC32A2921A600ECBE86 /* Recipe+CoreDataProperties.swift */,
+				9889AEC42A2921A600ECBE86 /* Ingredient+CoreDataClass.swift */,
+				9889AEC52A2921A600ECBE86 /* Ingredient+CoreDataProperties.swift */,
+				9889AEC62A2921A600ECBE86 /* User+CoreDataClass.swift */,
+				9889AEC72A2921A600ECBE86 /* User+CoreDataProperties.swift */,
+				9889AEC82A2921A600ECBE86 /* IngredientInfo+CoreDataClass.swift */,
+				9889AEC92A2921A600ECBE86 /* IngredientInfo+CoreDataProperties.swift */,
+				9889AECA2A2921A600ECBE86 /* Course+CoreDataClass.swift */,
+				9889AECB2A2921A600ECBE86 /* Course+CoreDataProperties.swift */,
 			);
 			name = CoreDataClasses;
 			sourceTree = "<group>";
@@ -222,28 +228,30 @@
 			files = (
 				9817794329FC75FC005AACFA /* coursesView.swift in Sources */,
 				98F8CAA22A23D64900EB5BD7 /* ingredientsEditor.swift in Sources */,
+				9889AECC2A2921A600ECBE86 /* Cocktail+CoreDataClass.swift in Sources */,
+				9889AECF2A2921A600ECBE86 /* Recipe+CoreDataProperties.swift in Sources */,
+				9889AECD2A2921A600ECBE86 /* Cocktail+CoreDataProperties.swift in Sources */,
 				982383E42A1CD01F00AE2CFD /* coursesViewModel.swift in Sources */,
 				9817794129FC0A17005AACFA /* menuView.swift in Sources */,
 				9817793F29FC08FF005AACFA /* startingView.swift in Sources */,
 				9817794729FC796B005AACFA /* userView.swift in Sources */,
-				9873EDC52A1CD58A00C7E691 /* Recipe+CoreDataClass.swift in Sources */,
-				9873EDC92A1CD58A00C7E691 /* User+CoreDataClass.swift in Sources */,
 				9873EDD32A1E487700C7E691 /* newCourseView.swift in Sources */,
 				9813E4AD29FA622B00617710 /* Persistence.swift in Sources */,
-				9873EDCA2A1CD58A00C7E691 /* User+CoreDataProperties.swift in Sources */,
+				9889AED42A2921A600ECBE86 /* IngredientInfo+CoreDataClass.swift in Sources */,
+				9889AED72A2921A600ECBE86 /* Course+CoreDataProperties.swift in Sources */,
 				9889AE9D2A263F2D00ECBE86 /* extensions.swift in Sources */,
-				9873EDCE2A1CD58A00C7E691 /* Cocktail+CoreDataProperties.swift in Sources */,
-				9873EDC82A1CD58A00C7E691 /* Ingredient+CoreDataProperties.swift in Sources */,
 				989D7FFD2A1FB60A000F7847 /* ingredientsList.swift in Sources */,
-				9873EDCB2A1CD58A00C7E691 /* Course+CoreDataClass.swift in Sources */,
-				9873EDCD2A1CD58A00C7E691 /* Cocktail+CoreDataClass.swift in Sources */,
 				9813E4B029FA622B00617710 /* Sips_Bites_Reworked.xcdatamodeld in Sources */,
+				9889AED12A2921A600ECBE86 /* Ingredient+CoreDataProperties.swift in Sources */,
+				9889AED02A2921A600ECBE86 /* Ingredient+CoreDataClass.swift in Sources */,
 				9873EDD12A1D15A300C7E691 /* newCourseViewModel.swift in Sources */,
-				9873EDC62A1CD58A00C7E691 /* Recipe+CoreDataProperties.swift in Sources */,
+				9889AED52A2921A600ECBE86 /* IngredientInfo+CoreDataProperties.swift in Sources */,
+				9889AECE2A2921A600ECBE86 /* Recipe+CoreDataClass.swift in Sources */,
+				9889AED62A2921A600ECBE86 /* Course+CoreDataClass.swift in Sources */,
+				9889AED32A2921A600ECBE86 /* User+CoreDataProperties.swift in Sources */,
 				9817794529FC795D005AACFA /* cocktaileView.swift in Sources */,
-				9873EDC72A1CD58A00C7E691 /* Ingredient+CoreDataClass.swift in Sources */,
 				9813E4A429FA622900617710 /* Sips_Bites_ReworkedApp.swift in Sources */,
-				9873EDCC2A1CD58A00C7E691 /* Course+CoreDataProperties.swift in Sources */,
+				9889AED22A2921A600ECBE86 /* User+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

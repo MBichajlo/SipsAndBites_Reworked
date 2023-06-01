@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21279" systemVersion="21G72" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Cocktail" representedClassName=".Cocktail" parentEntity="Recipe" syncable="YES">
-        <attribute name="amount_of_ingredients" optional="YES" attributeType="Transformable" customClassName="[String]"/>
-        <relationship name="ingredients" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Ingredient" inverseName="cocktail" inverseEntity="Ingredient"/>
+        <relationship name="ingredients" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="IngredientInfo" inverseName="cocktail" inverseEntity="IngredientInfo"/>
     </entity>
     <entity name="Course" representedClassName=".Course" parentEntity="Recipe" syncable="YES">
-        <attribute name="amount_of_ingredients" optional="YES" attributeType="Transformable" customClassName="[String]"/>
-        <relationship name="ingredients" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Ingredient" inverseName="course" inverseEntity="Ingredient"/>
+        <relationship name="ingredients" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="IngredientInfo" inverseName="course" inverseEntity="IngredientInfo"/>
     </entity>
     <entity name="Ingredient" representedClassName=".Ingredient" syncable="YES">
         <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="name" attributeType="String"/>
+        <relationship name="ingredientInfo" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="IngredientInfo" inverseName="ingredient" inverseEntity="IngredientInfo"/>
+    </entity>
+    <entity name="IngredientInfo" representedClassName="IngredientInfo" syncable="YES">
+        <attribute name="amount" optional="YES" attributeType="String"/>
         <relationship name="cocktail" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Cocktail" inverseName="ingredients" inverseEntity="Cocktail"/>
         <relationship name="course" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Course" inverseName="ingredients" inverseEntity="Course"/>
+        <relationship name="ingredient" maxCount="1" deletionRule="Nullify" destinationEntity="Ingredient" inverseName="ingredientInfo" inverseEntity="Ingredient"/>
     </entity>
     <entity name="Recipe" representedClassName=".Recipe" isAbstract="YES" syncable="YES">
         <attribute name="cost" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>

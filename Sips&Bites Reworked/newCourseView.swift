@@ -38,8 +38,8 @@ struct newCourseView: View {
                             .padding(.top,30)
                         Spacer()
                         
-                        //ingredientsList(dropDown: $ingrDropDown,viewModel: viewModel)
-                            
+                        
+                        
                         Spacer(minLength: 50)
                         
 
@@ -57,7 +57,11 @@ struct newCourseView: View {
             }.offset(x: editorVis ? -UIScreen.main.bounds.width*0.7:0)
                 
                 .animation(.default, value: editorVis)
+                .onTapGesture {
+                    editorVis=false
+                }
             ingredientsEditor(viewVis: $editorVis, viewModel: viewModel).opacity(100)
+            
         }
         .gesture(
             DragGesture()

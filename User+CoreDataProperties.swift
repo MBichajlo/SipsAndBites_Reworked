@@ -2,7 +2,7 @@
 //  User+CoreDataProperties.swift
 //  Sips&Bites Reworked
 //
-//  Created by Maciej Bichajło on 23/05/2023.
+//  Created by Maciej Bichajło on 01/06/2023.
 //
 //
 
