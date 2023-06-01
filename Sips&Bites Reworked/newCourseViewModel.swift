@@ -13,27 +13,34 @@ import CoreData
     private let context=PersistenceController.shared.container.viewContext
     
     @Published var allIngrList:[Ingredient]=[]
-    
+    @Published var newIngredientAlert=false
+    @Published var wrongNameAlert=false
     
     @Published var ingrList:[Ingredient]=[]
     @Published var newname:String=""
     
+    @Published var newIngredientName:String = ""
     
     
     
-    
-    func newIngredient()->Ingredient{
-        let newIngr=Ingredient(context: context)
-        newIngr.name="aaa"
-        newIngr.id=UUID()
-        print(newIngr.id)
-        save()
-        return newIngr
+    func newIngredient(){
+        
+        fetchAllIngredients()
+        if allIngrList.contains(where: {$0.name.lowercased()==newIngredientName.lowercased()}){
+            wrongNameAlert.toggle()
+        }else{
+            let newIngr=Ingredient(context: context)
+            newIngr.name=newIngredientName
+            newIngr.id=UUID()
+            print(newIngr.id)
+            save()
+        }
+        
     }
     
     func addToIngredients(){
         
-        ingrList.append(newIngredient())
+        //ingrList.append(newIngredient())
     }
     
     func ingrRemove(_ i:Ingredient){
@@ -74,7 +81,7 @@ import CoreData
     func fetchAllIngredients(_ filter:String=""){
         let request = NSFetchRequest<Ingredient>(entityName: "Ingredient")
         
-        request.predicate=NSPredicate(format: "name CONTAINS %@", filter)
+        
         do{
             try allIngrList=context.fetch(request)
         }catch{

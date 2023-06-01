@@ -50,8 +50,8 @@ struct ingredientsList: View {
                                             .onTapGesture {
                                                 isSearching.toggle()
                                             }
-                                            .onChange(of: ingredientFilter, perform: {i in
-                                                list.nsPredicate=NSPredicate(format: "%K BEGINSWITH %@","name".lowercased(), i.lowercased())
+                                            .onChange(of: ingredientFilter, perform: {_ in
+                                                list.nsPredicate=NSPredicate(format: "%K BEGINSWITH[cd] %@",#keyPath(Ingredient.name), ingredientFilter.lowercased())
                                             })
                                         if isSearching{
                                             Button("Cancel", action: {
@@ -71,7 +71,7 @@ struct ingredientsList: View {
                                             Text(i.name )
                                         }
                                         
-                                    }.frame(maxWidth: .infinity,maxHeight: (list.count>20) ?200: CGFloat(list.count*40))
+                                    }.frame(maxWidth: .infinity,maxHeight: (list.count>20) ?700: CGFloat(list.count*40))
                                         .listStyle(PlainListStyle())
                                         .ignoresSafeArea(edges: .all)
                                     
@@ -82,6 +82,13 @@ struct ingredientsList: View {
                                             Text("Dodaj składnik")
                                         }.alert("Wpisz nowy składnik", isPresented: $newIngredientAlert){
                                             
+                                            VStack {
+                                                TextField("AAAA", text: $viewModel.newIngredientName)
+                                            }
+                                                
+
+                                            
+
                                         }
 
                                     }
