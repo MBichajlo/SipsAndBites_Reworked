@@ -18,8 +18,12 @@ import CoreData
     @Published var wrongNameAlert=false
     @Published var amount=""
     
+   
+    
+    
     @Published var ingrList:[Ingredient]=[]
     @Published var newname:String=""
+    @Published var ingredients:[IngredientInfo]=[]
     
     @Published var newIngredientName:String = ""
     
@@ -40,13 +44,24 @@ import CoreData
         
     }
     
-    func addToIngredients(_ ingredient:Ingredient){
+    func changeAmount(_ i:IngredientInfo){
         
+        i.amount=amount
+        amount=""
+    }
+    
+    func addToIngredients(_ ingredient:Ingredient){
+        ingrList.append(ingredient)
+        let newIngredient = IngredientInfo(context: context)
+        newIngredient.ingredient=ingredient
+        save()
+        ingredients.append(newIngredient)
        
     }
     
-    func ingrRemove(_ i:Ingredient){
-        ingrList.removeAll(where: {$0.id==i.id})
+    func ingrRemove(_ i:IngredientInfo){
+        ingrList.removeAll(where: {$0.id==i.ingredient!.id})
+        ingredients.removeAll(where: {$0.ingredient! == i.ingredient!})
         print(ingrList)
     }
     

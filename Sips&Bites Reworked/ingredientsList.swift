@@ -129,7 +129,7 @@ struct ingredientsList: View {
                                         HStack{
                                             Button(ingr.name){
                                                 Task{@MainActor in
-                                                    viewModel.ingrRemove(ingr)
+                                                    //viewModel//.ingrRemove(ingr)
                                                     viewModel.ingrDelete(ingr)
                                                 }
                                                 

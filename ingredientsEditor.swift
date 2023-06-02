@@ -10,7 +10,10 @@ import CoreData
 struct ingredientsEditor: View {
     
     
-    
+    enum tFocus {
+        case search
+        case amount
+    }
     
     @Binding var viewVis:Bool
     @State var dragOffset=CGSize.zero
@@ -20,6 +23,7 @@ struct ingredientsEditor: View {
     //@State var shake = false
     @State var ingredientFilter:String=""
     
+    @FocusState var focus:tFocus?
     
  
     
@@ -39,9 +43,48 @@ struct ingredientsEditor: View {
                         Divider()
                             .overlay(.gray)
                             
-                        ForEach(viewModel.ingrList,id:\.id){ingr in
-                            Text(ingr.name)
-                        }
+                        ForEach(viewModel.ingredients,id:\.id){ingr in
+                            if ingr.amount==nil{
+                                HStack{
+                                    Text(ingr.ingredient!.name)
+                                    TextField("Ilość", text: $viewModel.amount)
+                                        .textInputAutocapitalization(.never).focused($focus, equals: .amount)
+                                    Button {
+                                        viewModel.changeAmount(ingr)
+                                    } label: {
+                                        Image(systemName: "checkmark")
+                                    }
+                                    Button {
+                                        viewModel.ingrRemove(ingr)
+                                    } label: {
+                                        Image(systemName:"delete.left")
+                                    }
+                                }
+                                
+                            }else{
+                                HStack{
+                                    Text(ingr.ingredient!.name+":")
+                                        .font(.headline)
+                                    Text(ingr.amount!)
+                                        .font(.subheadline)
+                                    
+
+                                }
+                                .gesture(
+                                    LongPressGesture(minimumDuration: 0.5)
+                                        .onEnded({_ in
+                                            
+                                            ingr.amount=nil
+                                            viewModel.amount=""
+                                            
+                                        })
+                                    
+                                )
+                            }
+                            
+                        }.onDelete(perform: {index in
+                            
+                        })
                         
                         Divider()
                         Text("Wszystkie składniki:")

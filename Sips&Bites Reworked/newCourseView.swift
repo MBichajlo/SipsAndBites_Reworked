@@ -77,6 +77,7 @@ struct newCourseView: View {
                     }
                     
                 }
+            
         )
         .scrollDismissesKeyboard(.never)
     }
