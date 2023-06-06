@@ -70,6 +70,7 @@ struct coursesView: View {
                                 print(course)
                                 print("aa")
                                 print(type(of: course))
+                                print(course.ingredients as Any)
                                 
                                 Task {@MainActor in
                                     viewModel.deleteCourse(course)

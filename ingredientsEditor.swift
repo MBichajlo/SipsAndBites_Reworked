@@ -17,10 +17,10 @@ struct ingredientsEditor: View {
     
     @Binding var viewVis:Bool
     @State var dragOffset=CGSize.zero
+   
     @ObservedObject var viewModel:newCourseModel
     @FetchRequest(sortDescriptors: [],animation: .none) var list:FetchedResults<Ingredient>
-    @State var isSearching = false
-    //@State var shake = false
+   
     @State var ingredientFilter:String=""
     
     @FocusState var focus:tFocus?
@@ -95,17 +95,20 @@ struct ingredientsEditor: View {
                                 .textInputAutocapitalization(.never)
                                 
                                 .onChange(of: ingredientFilter, perform: {_ in
+                                    
                                     if ingredientFilter.isEmpty{
                                         list.nsPredicate=NSPredicate(format: "not (SELF IN %@)", viewModel.ingrList)
+                                        viewModel.isSearching=false
                                     }else{
                                         
                                         list.nsPredicate=NSCompoundPredicate(type: .and, subpredicates: [NSPredicate(format: "%K BEGINSWITH[cd] %@",#keyPath(Ingredient.name), ingredientFilter.lowercased()),NSPredicate(format: "not (SELF IN %@)", viewModel.ingrList)])
-                                        isSearching=true
+                                        viewModel.isSearching=true
+                                        
                                     }
                                 })
-                            if isSearching{
+                            if viewModel.isSearching{
                                 Button("Cancel", action: {
-                                    isSearching.toggle()
+                                    viewModel.isSearching = false
                                     ingredientFilter=""
                                     
                                     
@@ -138,8 +141,8 @@ struct ingredientsEditor: View {
                         if (list.count<4){
                             Button {
                                 viewModel.newIngredientAlert.toggle()
-                                isSearching.toggle()
-                                //list.nsPredicate = nil
+                                viewModel.isSearching=false
+                                
                                 
                                 ingredientFilter=""
                                 

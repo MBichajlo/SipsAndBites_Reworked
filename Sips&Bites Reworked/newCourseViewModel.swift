@@ -17,6 +17,7 @@ import CoreData
     @Published var addingIngredientAlert=false
     @Published var wrongNameAlert=false
     @Published var amount=""
+    @Published var isSearching = false
     
    
     
@@ -110,6 +111,9 @@ import CoreData
         let newCourse=Course(context: context)
         newCourse.id=UUID()
         newCourse.name=self.newname
+        for i in ingredients{
+            newCourse.addToIngredients(i)
+        }
         save()
     }
     
